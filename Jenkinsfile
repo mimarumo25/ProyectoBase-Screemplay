@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat
 def dateFormat = new SimpleDateFormat("yyyyMMddHHmm")
 def date = new Date()
 def timestamp = dateFormat.format(date).toString()
-def Correo = "hcarvajal@choucairtesting.com"
+def Correo = "mrubidem@choucairtesting.com"
 
 pipeline {
     agent any
@@ -97,7 +97,7 @@ pipeline {
                                         )
                                 }
                             }
-                        }
+                }
 
 
     }
