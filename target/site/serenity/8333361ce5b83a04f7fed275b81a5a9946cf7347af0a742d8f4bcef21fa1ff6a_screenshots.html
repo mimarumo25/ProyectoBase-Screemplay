@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Demo Banco de la República</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="6fdc2f9a47ed781f31c4855ec43de18de3ea7b42cea6a8e324b6bfee7310e7f5.html">Formulario Popup Validation</a></span>
+                > <span class="truncate-60"><a
+                    href="8333361ce5b83a04f7fed275b81a5a9946cf7347af0a742d8f4bcef21fa1ff6a.html">Digiligenciamiento exitoso del formulario Popup Validation </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-11-2022 13:58</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Formulario Popup Validation </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                El usuario debe poder ingresar al formulario los datos requeridos.
+Cada campo del formulario realiza validaciones de obligatoriedad,
+longitud y formato, el sistema debe presentar las validaciones respectivas
+para cada campo a través un globo informativo.
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="773a571d092c5846a3019576b732f5fa2a9b129891c011c10cda8839a7f193e0.html">Regresion
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="9a16e4558ed645ae7e73835e8d06ced7517756a3b15e7acf5dc6d49daa9a7456.html">Casoexitoso
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Digiligenciamiento exitoso del formulario Popup Validation
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="c37e1cb0e2de287da47038eec75cff5b96750129e7f173a24536700c6a509922.png" title="Given Autentico en colorlib con usuario &quot;demo&quot; y clave &quot;demo&quot;" width="1366"/>
+                <img src="7bc65727466308220a0ece1c5b8f2bb315a322c626adf0328b48b3a535037f27.png" title="Pablo opens the Color lib page" width="1366"/>
+                <img src="08abe9e0cdb7b41599d20e2c6197cab023c729b6bfc6985c7be57d708ce002c2.png" title="Pablo enters 'demo' into Campo para ingresar el username" width="1366"/>
+                <img src="8f99f88251e6cede97aa508353d4b179bf8685d39b08dc90212a9207717f6332.png" title="Pablo enters 'demo' into Campo para ingresar el passwword" width="1366"/>
+                <img src="c37e1cb0e2de287da47038eec75cff5b96750129e7f173a24536700c6a509922.png" title="Pablo clicks on Bot&oacute;n de login" width="1366"/>
+                <img src="c37e1cb0e2de287da47038eec75cff5b96750129e7f173a24536700c6a509922.png" title="Then validar" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="And Ingreso a la funcionalidad Forms Validation" width="1366"/>
+                <img src="c9c4dee2016fa8c9b7b251429283d541f4d1bd58c5b4e2844d99b02794da3f08.png" title="Pablo clicks on Label men&uacute; FORMS" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Pablo clicks on Label submen&uacute; FORMS VALIDATIONS" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Valor del Label Titulo Ventana Form Validation should be 'Popup Validation'" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="When Diligencio Formulario Popup Validation
+| strRequired | strSelect | strMultipleSelect | strMultipleSelect2 | strUrl | strEmail | strPassword | strConfirmPassword | strMinimumFieldSize | strMaximumFieldSize | strNumber | strIP | strDate | strDateEarlier |
+| a | Tennis | Tennis | Golf | http://tenis.com | tenis@tenis.com | 123 | 123 | 123456 | 123456 | 123 | 192.168.3.1 | 2011-12-01 | 2011-12-01 |" width="1366"/>
+                <img src="1cb66911a0d8be966d97a825d81587533653c3f97bdf66ab6fb7395a5b556c69.png" title="Pablo enters 'a' into Input para el campo Required" width="1366"/>
+                <img src="2627e2b8e18ac27e8ec043f709b887aa5453b9a16dee815b3a41332830e4b909.png" title="Pablo select Tennis on Select para seleccionar deporte" width="1366"/>
+                <img src="33edd07affd9a7c3bc0c5c89ee6cfd5f3e047fbe85a5261923b1bcbebdcd5d67.png" title="Pablo select Tennis on Select para seleccionar segundo deporte" width="1366"/>
+                <img src="aded87750ecc481c96ed6e213a511de20386b93cf6287644b9bf080df328eb73.png" title="Pablo select Golf on Select para seleccionar segundo deporte" width="1366"/>
+                <img src="482a81e173c6546e9e32979e64b9a9a713a2ac0079453886b963824c6d24eabc.png" title="Pablo enters 'http://tenis.com' into Input para el campo URL" width="1366"/>
+                <img src="1bdc0a6a88665df30ea0352c7207d2324daf62f269020bc4f2470ec0e85b1d1b.png" title="Pablo enters 'tenis@tenis.com' into Input para el campo E-MAIL" width="1366"/>
+                <img src="1f0cb17e7b49dcd6f1070f8c2b769572a2bdb221f638cc18462a7255e26894ce.png" title="Pablo enters '123' into Input para el campo Password" width="1366"/>
+                <img src="ad834e1738af05370870a491d8a7be71bb705f2a643ebd794e8f6c591eed271f.png" title="Pablo enters '123' into Input para el campo Confirm Password" width="1366"/>
+                <img src="2683fce8228a2a278641c3098f3b6180e0f6612c0978f051b90ac6cd7f33d50a.png" title="Pablo enters '123456' into Input para el campo MINIMUN FIELD SIZE" width="1366"/>
+                <img src="e8d11c5efba1bc75cf7706dd116cc065b71f053419ceb48951b3b290c3569e5b.png" title="Pablo enters '123456' into Input para el campo MAXIMUN FIELD SIZE" width="1366"/>
+                <img src="5ff6db38ac7d5e4498170b6ba4da107ff0971303469f2cb3f8a6eb69362e731c.png" title="Pablo enters '123' into Input para el campo NUMBER" width="1366"/>
+                <img src="0a8b65bff23b4da8bb0b1ca92d74fa1a0451365126e98ccff8cf1d413d9f1874.png" title="Pablo enters '192.168.3.1' into Input para el campo IP" width="1366"/>
+                <img src="0c507ebc78e2e006b3238c7a4c608466026f5114540b0461ae78f19363aa34cc.png" title="Pablo enters '2011-12-01' into Input para el campo DATE" width="1366"/>
+                <img src="ea187c3f5b54be997f2d79fb861bc034250dd300b8065a1554cb086ade0c943a.png" title="Pablo enters '2011-12-01' into Input para el campo DATE EARLIER" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Pablo clicks on Bot&oacute;n de VALIDATE" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Verifico ingreso exitoso" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Validar Exitencia de Popup should be (false)" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Popup de validaci&amp;oacute;n sobre cada campo should be an element that is not visible: <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

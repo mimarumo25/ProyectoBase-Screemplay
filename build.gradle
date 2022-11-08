@@ -1,0 +1,39 @@
+group 'com.bancorepublica.demo'
+version '1.0-SNAPSHOT'
+
+description = 'Automatización Demo Banco República'
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: 'java-library'
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.9")
+    }
+}
+dependencies {
+    testImplementation 'net.serenity-bdd:serenity-core:1.1.1'
+    testImplementation 'net.serenity-bdd:serenity-junit:1.1.1'
+    testImplementation ('junit:junit:4.12')
+    testImplementation ('org.assertj:assertj-core:1.7.0')
+    testImplementation ('org.slf4j:slf4j-simple:1.7.7')
+    implementation 'net.serenity-bdd:serenity-core:1.9.9'
+    implementation 'net.serenity-bdd:serenity-junit:1.9.9'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.5'
+    implementation 'net.serenity-bdd:serenity-screenplay:1.9.9'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:1.9.9'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.2.3'
+}
+gradle.startParameter.continueOnFailure = true
