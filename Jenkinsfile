@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat
 def dateFormat = new SimpleDateFormat("yyyyMMddHHmm")
 def date = new Date()
 def timestamp = dateFormat.format(date).toString()
-def Correo = "mrubidem@choucairtesting.com"
+def Correo = "hcarvajal@choucairtesting.com"
 
 pipeline {
     agent any
@@ -59,6 +59,45 @@ pipeline {
                                         }
                             }
                 }
+
+                        stage('SonarQube analysis')
+                                        {
+                                            steps {
+                                                script {
+                                                    scannerHome = tool 'SonarQubeScanner'
+                                                    //mismo nombre del servidor configurado en las Global Tools Jenkins
+                                                }
+                                                withSonarQubeEnv('SonarQube')//mismo nombre del servidor configurado en la configuracion del sistema jenkins
+                                                        {
+                                                            bat 'sonar-scanner'
+                                                        }
+                                            }
+                                }
+
+
+                       stage('Notificar al Correo') {
+                            steps {
+                                script {
+                                    if (currentBuild.result == 'UNSTABLE')
+                                        currentBuild.result = 'FAILURE'
+
+                                    if (currentBuild.result == 'SUCCESS')
+                                        emailext(
+                                                subject: "PROYECTO BASE WEB - EJECUCION EXITOSA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                                                body: """<p><b style="color:MediumSeaGreen;">EJECUCION EXITOSA:</b> Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                            				<p><b>Para verificar el estado de la ejecucion ingrese a:</b> &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+                                                to: "${Correo}"
+                                        )
+                                    if (currentBuild.result == 'FAILURE')
+                                        emailext(
+                                                subject: "PROYECTO BASE WEB - EJECUCION FALLIDA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                                                body: """<p><b style="color:red;">EJECUCION FALLIDA:</b> Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                            				<p><b>Para verificar el estado de la ejecucion ingrese a:</b> &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+                                                to: "${Correo}"
+                                        )
+                                }
+                            }
+                        }
 
 
     }
