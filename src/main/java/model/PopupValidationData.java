@@ -1,5 +1,7 @@
 package model;
 
+import org.apache.xpath.operations.String;
+
 public class PopupValidationData {
     private String strRequired;
     private String strSelect;
