@@ -34,14 +34,14 @@ pipeline {
                                         {
                                             try
                                             {
-                                                bat  " rename \"${WORKSPACE}\\target\" serenity_${timestamp}"
+                                                bat  " rename \"${WORKSPACE}\\target\" serenity_${BUILD_TIMESTAMP}"
                                                 echo 'Backup de evidencias realizado con exito'
 
                                                 publishHTML([
                                                         allowMissing: false,
                                                         alwaysLinkToLastBuild: true,
                                                         keepAll: true,
-                                                        reportDir: "${WORKSPACE}//serenity_${timestamp}",
+                                                        reportDir: "${WORKSPACE}//serenity_${BUILD_TIMESTAMP}",
                                                         reportFiles: 'index.html',
                                                         reportName: 'Evidencias ProyectoDemo',
                                                         reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'
@@ -52,7 +52,7 @@ pipeline {
                                             catch(e)
                                             {
                                                 echo 'No se realizo el Backup de evidencias'
-                                                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}//target/serenity_${timestamp}", reportFiles: 'index.html', reportName: 'Evidencias Automatizacion SwagLabs', reportTitles: 'Proyecto SwagLabs WEB POM'])
+                                                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}//target/serenity_${BUILD_TIMESTAMP}", reportFiles: 'index.html', reportName: 'Evidencias Automatizacion ProyectoDemo', reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'])
                                                 echo 'Reporte Html realizado con exito'
                                                 currentBuild.result='SUCCESS'
                                             }
