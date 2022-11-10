@@ -43,8 +43,8 @@ pipeline {
                                                         keepAll: true,
                                                         reportDir: "${WORKSPACE}//serenity_${timestamp}",
                                                         reportFiles: 'index.html',
-                                                        reportName: 'Evidencias Automatizacion SwagLabs',
-                                                        reportTitles: 'Proyecto SwagLabs WEB POM'
+                                                        reportName: 'Evidencias ProyectoDemo',
+                                                        reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'
                                                 ])
                                                 echo 'Reporte Html realizado con exito'
 
@@ -83,14 +83,14 @@ pipeline {
 
                                     if (currentBuild.result == 'SUCCESS')
                                         emailext(
-                                                subject: "PROYECTO BASE WEB - EJECUCION EXITOSA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                                                subject: "PROYECTO DEMO WEB - EJECUCION EXITOSA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                                                 body: """<p><b style="color:MediumSeaGreen;">EJECUCION EXITOSA:</b> Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                             				<p><b>Para verificar el estado de la ejecucion ingrese a:</b> &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
                                                 to: "${Correo}"
                                         )
                                     if (currentBuild.result == 'FAILURE')
                                         emailext(
-                                                subject: "PROYECTO BASE WEB - EJECUCION FALLIDA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                                                subject: "PROYECTO DEMO WEB - EJECUCION FALLIDA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                                                 body: """<p><b style="color:red;">EJECUCION FALLIDA:</b> Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                             				<p><b>Para verificar el estado de la ejecucion ingrese a:</b> &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
                                                 to: "${Correo}"
