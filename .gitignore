@@ -18,16 +18,16 @@
 *.rar
 
 # Serenity-BDD
-*/target/
-*target/
-*/logs/
-*build/
+*/logs
+build/
+target/
 
 # Intellij
 */.idea/
 *../.idea/
 *.idea/
 */out/
+.idea
 
 # Gradle
 */.gradle/

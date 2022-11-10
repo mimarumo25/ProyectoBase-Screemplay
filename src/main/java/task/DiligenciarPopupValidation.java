@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import userinterface.ColorLibFormValidationPage;
 
+import java.util.List;
 
 public class DiligenciarPopupValidation implements Task {
 

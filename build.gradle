@@ -1,7 +1,7 @@
-group 'com.bancorepublica.demo'
+group 'com.demo'
 version '1.0-SNAPSHOT'
 
-description = 'Automatización Demo Banco República'
+description = 'Automatización Demo '
 apply plugin: 'groovy'
 apply plugin: 'java'
 apply plugin: 'eclipse'
