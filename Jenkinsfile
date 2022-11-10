@@ -34,16 +34,16 @@ pipeline {
                                         {
                                             try
                                             {
-                                                bat  " rename \"${WORKSPACE}\\target\" serenity_${BUILD_TIMESTAMP}"
+                                                bat  " rename \"${WORKSPACE}\\target\" serenity_${timestamp}"
                                                 echo 'Backup de evidencias realizado con exito'
 
                                                 publishHTML([
                                                         allowMissing: false,
                                                         alwaysLinkToLastBuild: true,
                                                         keepAll: true,
-                                                        reportDir: "${WORKSPACE}//serenity_${BUILD_TIMESTAMP}",
+                                                        reportDir: "${WORKSPACE}//serenity_${timestamp}",
                                                         reportFiles: 'index.html',
-                                                        reportName: 'Evidencias ProyectoDemo',
+                                                        reportName: 'Evidencias Proyecto Demo ',
                                                         reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'
                                                 ])
                                                 echo 'Reporte Html realizado con exito'
@@ -52,7 +52,7 @@ pipeline {
                                             catch(e)
                                             {
                                                 echo 'No se realizo el Backup de evidencias'
-                                                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}//target/serenity_${BUILD_TIMESTAMP}", reportFiles: 'index.html', reportName: 'Evidencias Automatizacion ProyectoDemo', reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'])
+                                                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "${WORKSPACE}//target/serenity_${timestamp}", reportFiles: 'index.html', reportName: 'Evidencias Automatizacion ProyectoDemo', reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'])
                                                 echo 'Reporte Html realizado con exito'
                                                 currentBuild.result='SUCCESS'
                                             }
@@ -83,14 +83,14 @@ pipeline {
 
                                     if (currentBuild.result == 'SUCCESS')
                                         emailext(
-                                                subject: "PROYECTO DEMO WEB - EJECUCION EXITOSA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                                                subject: "PROYECTO BASE WEB - EJECUCION EXITOSA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                                                 body: """<p><b style="color:MediumSeaGreen;">EJECUCION EXITOSA:</b> Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                             				<p><b>Para verificar el estado de la ejecucion ingrese a:</b> &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
                                                 to: "${Correo}"
                                         )
                                     if (currentBuild.result == 'FAILURE')
                                         emailext(
-                                                subject: "PROYECTO DEMO WEB - EJECUCION FALLIDA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                                                subject: "PROYECTO BASE WEB - EJECUCION FALLIDA ESCENARIOS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                                                 body: """<p><b style="color:red;">EJECUCION FALLIDA:</b> Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                             				<p><b>Para verificar el estado de la ejecucion ingrese a:</b> &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
                                                 to: "${Correo}"
