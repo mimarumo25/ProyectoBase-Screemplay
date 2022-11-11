@@ -37,7 +37,7 @@ pipeline {
                                                 bat  " rename \"${WORKSPACE}\\target\" serenity_${timestamp}"
                                                 echo 'Backup de evidencias realizado con exito'
 
-                                                publishHTML([
+                                                publishHTML(target : [
                                                         allowMissing: false,
                                                         alwaysLinkToLastBuild: true,
                                                         keepAll: true,
