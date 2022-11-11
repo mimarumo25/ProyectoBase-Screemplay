@@ -41,7 +41,7 @@ pipeline {
                                                         allowMissing: false,
                                                         alwaysLinkToLastBuild: true,
                                                         keepAll: true,
-                                                        reportDir: "${WORKSPACE}//serenity_${timestamp}",
+                                                        reportDir: "${WORKSPACE}//serenity_${timestamp}/site/serenity/",
                                                         reportFiles: 'index.html',
                                                         reportName: 'Evidencias Proyecto Demo ',
                                                         reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'
