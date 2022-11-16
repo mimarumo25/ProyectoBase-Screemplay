@@ -41,7 +41,7 @@ pipeline {
                                                         allowMissing: false,
                                                         alwaysLinkToLastBuild: true,
                                                         keepAll: true,
-                                                        reportDir: "${WORKSPACE}//serenity_${timestamp}/site/serenity/",
+                                                        reportDir: "${WORKSPACE}/serenity_${timestamp}/site/serenity/",
                                                         reportFiles: 'index.html',
                                                         reportName: 'Evidencias Proyecto Demo ',
                                                         reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'
@@ -61,17 +61,25 @@ pipeline {
                 }
 
                         stage('SonarQube analysis')
-                                        {
-                                            steps {
-                                                script {
-                                                    scannerHome = tool 'SonarQubeScanner'
-                                                    //mismo nombre del servidor configurado en las Global Tools Jenkins
-                                                }
-                                                withSonarQubeEnv('SonarQube')//mismo nombre del servidor configurado en la configuracion del sistema jenkins
-                                                        {
-                                                            bat 'sonar-scanner'
-                                                        }
-                                            }
+                             {
+                                  steps {
+                                        script {
+                                          scannerHome = tool 'SonarQubeScanner'
+                                            //mismo nombre del servidor configurado en las Global Tools Jenkins
+                                        }
+                                        withSonarQubeEnv('SonarQube')//mismo nombre del servidor configurado en la configuracion del sistema jenkins
+                                               {
+                                                  bat 'sonar-scanner'
+                                               }
+                                        }
+                                }
+                        stage('Validación del Quality Gate')
+                                {
+                                     steps {
+                                        Sleep 60
+                                         WaitForQualityGate abortPipeline: true
+                                     }
+
                                 }
 
 
