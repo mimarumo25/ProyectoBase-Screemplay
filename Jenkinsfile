@@ -60,30 +60,28 @@ pipeline {
                             }
                 }
 
-                        stage('SonarQube analysis')
-                             {
-                                  steps {
-                                        script {
-                                          scannerHome = tool 'SonarQubeScanner'
-                                            //mismo nombre del servidor configurado en las Global Tools Jenkins
-                                        }
-                                        withSonarQubeEnv('SonarQube')//mismo nombre del servidor configurado en la configuracion del sistema jenkins
-                                               {
-                                                  bat 'sonar-scanner'
-                                               }
-                                        }
-                                }
-                        stage('Validación del Quality Gate')
-                                {
-                                     steps {
-                                        Sleep 60
-                                         WaitForQualityGate abortPipeline: true
-                                     }
-
-                                }
+                stage('SonarQube analysis'){
+                    steps {
+                        script {
+                             scannerHome = tool 'SonarQubeScanner'
+                            //mismo nombre del servidor configurado en las Global Tools Jenkins
+                        }
+                        withSonarQubeEnv('SonarQube')//mismo nombre del servidor configurado en la configuracion del sistema jenkins
+                            {
+                                bat 'sonar-scanner'
+                            }
+                        }
+                }
+                stage ('Sonar Quality Gate') {
+                    steps {
+                        timeout(time: 1, unit: ‘MINUTES’) {
+                            waitForQualityGate abortPipeline: true
+                        }
+                    }
+                }
 
 
-                       stage('Notificar al Correo') {
+                stage('Notificar al Correo') {
                             steps {
                                 script {
                                     if (currentBuild.result == 'UNSTABLE')
