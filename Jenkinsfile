@@ -72,6 +72,7 @@ pipeline {
                             }
                         }
                 }
+       sleep(60)
       stage("Quality Gate"){
        steps {
          script {
