@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Formulario Popup Validation" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-10T15:49:57" hostname="CHMEPFJ4NFL3" time="35.993">
+<testsuite name="Formulario Popup Validation" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-18T06:22:45" hostname="CHMEPFJ4NFL3" time="33.379">
   <properties/>
-  <testcase name="Digiligenciamiento exitoso del formulario Popup Validation" classname="Formulario Popup Validation" time="35.993"/>
+  <testcase name="Digiligenciamiento exitoso del formulario Popup Validation" classname="Formulario Popup Validation" time="33.379"/>
   <system-out><![CDATA[Inicio Test
 Fin Test
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 107.0.5304.62 (resolved driver for Chrome 107)
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\mrubidem\.cache\selenium\chromedriver\win32\107.0.5304.62\chromedriver.exe
-nov 10, 2022 10:49:58 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+nov 18, 2022 1:22:47 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 28771
+Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 49066
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-nov 10, 2022 10:49:59 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+nov 18, 2022 1:22:48 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 [Test worker] INFO net.serenitybdd.core.Serenity - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
