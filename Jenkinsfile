@@ -99,6 +99,7 @@ pipeline {
                                          reportFiles: 'index.html',
                                          reportName: 'Evidencias Proyecto Demo ',
                                          reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'
+                                         ])
                                         echo 'Reporte Html realizado con exito'
                                         currentBuild.result='SUCCESS'
                                     }
