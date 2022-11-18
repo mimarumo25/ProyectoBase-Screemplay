@@ -40,7 +40,7 @@ pipeline {
                     try {
                         timeout(time: 1, unit: 'MINUTES') {
                             waitForQualityGate abortPipeline: true
-                            currentBuild.result = 'SUCCESS'
+                           // currentBuild.result = 'SUCCESS'
                         }
                     }
                     catch (ex) {
