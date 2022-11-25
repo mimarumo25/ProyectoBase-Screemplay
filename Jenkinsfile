@@ -37,12 +37,13 @@ pipeline {
         stage("Quality Gate") {
             steps {
                 script {
-                         timeout(time: 1, unit: 'HOURS') { // Just in case something goes wrong, pipeline will be killed after a timeout
-                         def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
-                         if (qg.status != 'OK') {
-                                error "Pipeline aborted due to quality gate failure: ${qg.status}"
-                            }
-                         }
+                    timeout(time: 1, unit: 'HOURS') {
+                        // Just in case something goes wrong, pipeline will be killed after a timeout
+                        def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
+                        if (qg.status != 'OK') {
+                            error "Pipeline aborted due to quality gate failure: ${qg.status}"
+                        }
+                    }
                 }
             }
         }
@@ -65,40 +66,38 @@ pipeline {
             }
         }
 
-        stage('Generar evidencia'){
+        stage('Generar evidencia') {
             steps
                     {
                         script
                                 {
-                                    try
-                                    {
-                                        bat  " rename \"${WORKSPACE}\\target\" serenity_${timestamp}"
+                                    try {
+                                        bat " rename \"${WORKSPACE}\\target\" serenity_${timestamp}"
                                         echo 'Backup de evidencias realizado con exito'
 
                                         publishHTML([
-                                                allowMissing: false,
+                                                allowMissing         : false,
                                                 alwaysLinkToLastBuild: true,
-                                                keepAll: true,
-                                                reportDir: "${WORKSPACE}//serenity_${timestamp}/site/serenity",
-                                                reportFiles: 'index.html',
-                                                reportName: 'Evidencias Proyecto Demo ',
-                                                reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'
+                                                keepAll              : true,
+                                                reportDir            : "${WORKSPACE}//serenity_${timestamp}/site/serenity",
+                                                reportFiles          : 'index.html',
+                                                reportName           : 'Evidencias Proyecto Demo ',
+                                                reportTitles         : 'Proyecto ProyectoDemo WEB SCREEMPLAY'
                                         ])
                                         echo 'Reporte Html realizado con exito'
                                     }
-                                    catch(e)
-                                    {
+                                    catch (e) {
                                         echo 'No se realizo el Backup de evidencias'
-                                        publishHTML([allowMissing: false,
-                                         alwaysLinkToLastBuild: true,
-                                         keepAll: true,
-                                         reportDir: "${WORKSPACE}//target/serenity_${timestamp}",
-                                         reportFiles: 'index.html',
-                                         reportName: 'Evidencias Proyecto Demo ',
-                                         reportTitles: 'Proyecto ProyectoDemo WEB SCREEMPLAY'
-                                         ])
+                                        publishHTML([allowMissing         : false,
+                                                     alwaysLinkToLastBuild: true,
+                                                     keepAll              : true,
+                                                     reportDir            : "${WORKSPACE}//target/serenity_${timestamp}",
+                                                     reportFiles          : 'index.html',
+                                                     reportName           : 'Evidencias Proyecto Demo ',
+                                                     reportTitles         : 'Proyecto ProyectoDemo WEB SCREEMPLAY'
+                                        ])
                                         echo 'Reporte Html realizado con exito'
-                                        currentBuild.result='SUCCESS'
+                                        currentBuild.result = 'SUCCESS'
                                     }
                                 }
                     }
