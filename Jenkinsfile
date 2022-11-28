@@ -7,7 +7,9 @@ def timestamp = dateFormat.format(date).toString()
 def CORREOS = "mrubidem@choucairtesting.com"
 
 pipeline {
-    agent any
+    agent{
+        ${agent}
+    }
     stages {
         stage('Obtener Fuentes')
                 {
