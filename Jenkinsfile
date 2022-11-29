@@ -8,7 +8,7 @@ def CORREOS = "mrubidem@choucairtesting.com"
 
 pipeline {
     agent{
-       label ${agent}
+       label "${params.agent}"
     }
     stages {
         stage('Obtener Fuentes')
