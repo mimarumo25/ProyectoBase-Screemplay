@@ -1,8 +1,7 @@
 package stepdefinitions;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import cucumber.api.java.en.*;
 import model.PopupValidationData;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -13,10 +12,9 @@ import task.DiligenciarPopupValidation;
 import task.Login;
 import task.OpenOut;
 import task.Seleccionar;
-import userinterface.ColorLibFormValidationPage;
+
 import java.util.List;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotVisible;
-import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
+
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class PopupValidationDefinition {

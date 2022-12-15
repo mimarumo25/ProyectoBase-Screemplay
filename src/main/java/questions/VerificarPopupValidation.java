@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import userinterface.ColorLibFormValidationPage;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotVisible;
+import static userinterface.ColorLibFormValidationPage.POPUP_GLOBOINFORMATIVO;
 
 public class VerificarPopupValidation implements Question<Boolean> {
     public static VerificarPopupValidation existePopup() {
@@ -19,22 +20,6 @@ public class VerificarPopupValidation implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        try{
-            /*OnStage.theActorInTheSpotlight().should(
-                    EventualConsequence.eventually(
-                            GivenWhenThen.seeThat(
-                                    WebElementQuestion.the(ColorLibFormValidationPage.POPUP_GLOBOINFORMATIVO),
-                                    WebElementStateMatchers.isNotVisible()
-                            )
-                    ).waitingForNoLongerThan(3).seconds()
-            );*/
-            OnStage.theActorInTheSpotlight().attemptsTo(
-                    WaitUntil.the(ColorLibFormValidationPage.POPUP_GLOBOINFORMATIVO, isNotVisible()).
-                            forNoMoreThan(3).seconds()
-            );
-            return false;
-        }catch (Exception e){
-            return true;
-        }
+        return POPUP_GLOBOINFORMATIVO.resolveFor(actor).isDisplayed();
     }
 }

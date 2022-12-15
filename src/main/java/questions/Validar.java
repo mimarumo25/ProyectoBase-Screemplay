@@ -18,11 +18,6 @@ public class Validar implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        String strMensajeXpath = Text.of(ColorLibFormValidationPage.HOME_LOGO).viewedBy(actor).asString();
-        if(strLabelHomePage.equals(strMensajeXpath)){
-            return true;
-        }else{
-            return true;
-        }
+        return ColorLibFormValidationPage.HOME_LOGO.resolveFor(actor).isDisplayed();
     }
 }

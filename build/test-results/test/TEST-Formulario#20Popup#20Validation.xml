@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Formulario Popup Validation" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-23T21:08:05" hostname="CHMEPFJ4NFL3" time="37.483">
+<testsuite name="Formulario Popup Validation" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-12-02T13:35:02" hostname="CHMEPFJ4NFL3" time="29.819">
   <properties/>
-  <testcase name="Digiligenciamiento exitoso del formulario Popup Validation" classname="Formulario Popup Validation" time="37.483"/>
+  <testcase name="Digiligenciamiento exitoso del formulario Popup Validation" classname="Formulario Popup Validation" time="29.819">
+    <failure message="java.lang.AssertionError: &#10;Expected: &quot;Popup Validation&quot;&#10;     but: was &lt;true&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: &quot;Popup Validation&quot;
+     but: was &lt;true&gt;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:187)
+	at stepdefinitions.PopupValidationDefinition.ingresoALaFuncionalidadFormsValidation(PopupValidationDefinition.java:39)
+	at ✽.Ingreso a la funcionalidad Forms Validation(src/test/resources/features/demo.feature:13)
+</failure>
+  </testcase>
   <system-out><![CDATA[Inicio Test
 Fin Test
 ]]></system-out>
-  <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 107.0.5304.62 (resolved driver for Chrome 107)
-[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\mrubidem\.cache\selenium\chromedriver\win32\107.0.5304.62\chromedriver.exe
-nov 23, 2022 4:08:06 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+  <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 108.0.5359.71 (resolved driver for Chrome 108)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\mrubidem\.cache\selenium\chromedriver\win32\108.0.5359.71\chromedriver.exe
+dic 02, 2022 8:35:04 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 6515
+Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 10341
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-nov 23, 2022 4:08:07 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+[1669988105.823][WARNING]: This version of ChromeDriver has not been tested with Chrome version 108.
+dic 02, 2022 8:35:05 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[Test worker] INFO net.serenitybdd.core.Serenity - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+[Test worker] ERROR net.serenitybdd.core.Serenity - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: Digiligenciamiento exitoso del formulario Popup Validation
-----------------------------------------------------------------------------
+TEST FAILED: Digiligenciamiento exitoso del formulario Popup Validation
+--------------------------------------------------------------------------
+[Test worker] ERROR net.serenitybdd.core.Serenity - TEST FAILED AT STEP Then Valor del Label Titulo Ventana Form Validation should be 'Popup Validation'
+[Test worker] ERROR net.serenitybdd.core.Serenity - Expected: "Popup Validation" but: was <true>
 ]]></system-err>
 </testsuite>

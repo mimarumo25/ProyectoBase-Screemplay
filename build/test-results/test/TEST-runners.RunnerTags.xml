@@ -2,9 +2,21 @@
 <testsuite name="runners.RunnerTags" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="CHMEPFJ4NFL3" time="0.0">
   <properties/>
   <system-out><![CDATA[
-1 Scenarios (?[32m1 passed?[0m)
-4 Steps (?[32m4 passed?[0m)
-0m38.904s
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/demo.feature:9 ?[0m# Digiligenciamiento exitoso del formulario Popup Validation
+
+1 Scenarios (?[31m1 failed?[0m)
+4 Steps (?[31m1 failed?[0m, ?[36m2 skipped?[0m, ?[32m1 passed?[0m)
+0m31.149s
+
+java.lang.AssertionError: 
+Expected: "Popup Validation"
+     but: was <true>
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:187)
+	at stepdefinitions.PopupValidationDefinition.ingresoALaFuncionalidadFormsValidation(PopupValidationDefinition.java:39)
+	at ?.Ingreso a la funcionalidad Forms Validation(src/test/resources/features/demo.feature:13)
 
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO net.serenitybdd.core.Serenity - ?[36m
@@ -35,15 +47,17 @@
 
 TEST STARTED: Digiligenciamiento exitoso del formulario Popup Validation
 -------------------------------------------------------------------(formulario-popup-validation;digiligenciamiento-exitoso-del-formulario-popup-validation)
-[Test worker] INFO net.serenitybdd.core.Serenity - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+[Test worker] ERROR net.serenitybdd.core.Serenity - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: Digiligenciamiento exitoso del formulario Popup Validation
-----------------------------------------------------------------------------
+TEST FAILED: Digiligenciamiento exitoso del formulario Popup Validation
+--------------------------------------------------------------------------
+[Test worker] ERROR net.serenitybdd.core.Serenity - TEST FAILED AT STEP Then Valor del Label Titulo Ventana Form Validation should be 'Popup Validation'
+[Test worker] ERROR net.serenitybdd.core.Serenity - Expected: "Popup Validation" but: was <true>
 ]]></system-err>
 </testsuite>

@@ -111,7 +111,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-11-2022 16:08</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 02-12-2022 08:35</span>
     <br style="clear:left"/>
 </div>
 
@@ -161,9 +161,9 @@ para cada campo a través un globo informativo.
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">Digiligenciamiento exitoso del formulario Popup Validation
+                                <span class="failing-color">Digiligenciamiento exitoso del formulario Popup Validation
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -180,6 +180,54 @@ para cada campo a través un globo informativo.
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+                        <div class="panel-heading title="Assertion error: Expected: 'Popup Validation' but: was (true)">
+                            Assertion error: Expected: 'Popup Validation' but: was (true)
+                        </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#stacktraceModal-overall">
+                        View details
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal-overall" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                    java.lang.AssertionError
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>
+                                        <pre>Expected: &quot;Popup Validation&quot;<br>     but: was &lt;true&gt;</pre>
+                                    </h5>
+                                    stepdefinitions.PopupValidationDefinition.ingresoALaFuncionalidadFormsValidation(PopupValidationDefinition.java
+                                    :39) <br>
+                                    ✽.Ingreso a la funcionalidad Forms Validation(src/test/resources/features/demo.feature
+                                    :13) <br>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource5285806125796446705.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="c37e1cb0e2de287da47038eec75cff5b96750129e7f173a24536700c6a509922.png" title="Given Autentico en colorlib con usuario &quot;demo&quot; y clave &quot;demo&quot;" width="1366"/>
@@ -188,31 +236,9 @@ para cada campo a través un globo informativo.
                 <img src="b6ce701175db4548e4a941ef9d78f926e55fe978a530105a2a08bca768b2903d.png" title="Pablo enters 'demo' into Campo para ingresar el passwword" width="1366"/>
                 <img src="c37e1cb0e2de287da47038eec75cff5b96750129e7f173a24536700c6a509922.png" title="Pablo clicks on Bot&oacute;n de login" width="1366"/>
                 <img src="c37e1cb0e2de287da47038eec75cff5b96750129e7f173a24536700c6a509922.png" title="Then validar" width="1366"/>
-                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="And Ingreso a la funcionalidad Forms Validation" width="1366"/>
                 <img src="28f11030b8c83b772185b98c234e28e9dd02e9f8074c16add083a3439864de7b.png" title="Pablo clicks on Label men&uacute; FORMS" width="1366"/>
                 <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Pablo clicks on Label submen&uacute; FORMS VALIDATIONS" width="1366"/>
-                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Valor del Label Titulo Ventana Form Validation should be 'Popup Validation'" width="1366"/>
-                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="When Diligencio Formulario Popup Validation
-| strRequired | strSelect | strMultipleSelect | strMultipleSelect2 | strUrl | strEmail | strPassword | strConfirmPassword | strMinimumFieldSize | strMaximumFieldSize | strNumber | strIP | strDate | strDateEarlier |
-| a | Tennis | Tennis | Golf | http://tenis.com | tenis@tenis.com | 123 | 123 | 123456 | 123456 | 123 | 192.168.3.1 | 2011-12-01 | 2011-12-01 |" width="1366"/>
-                <img src="77c8aea249c71566ef18a1f3084ea574f4419fe393ea02daea7b0083995015ca.png" title="Pablo enters 'a' into Input para el campo Required" width="1366"/>
-                <img src="f120b8e440d74990a68def1b2e2bdb06593743fc8a27bb76e9e1bb984532edaf.png" title="Pablo select Tennis on Select para seleccionar deporte" width="1366"/>
-                <img src="cadaa5f7de8fdffc58c3d5a30a1dc72868d695295b4b1f92d2228ccbbbcea5d0.png" title="Pablo select Tennis on Select para seleccionar segundo deporte" width="1366"/>
-                <img src="9259e1986658c5ff904e9d4c69be167befab629cf6b35c9d70390a2be63ed9d7.png" title="Pablo select Golf on Select para seleccionar segundo deporte" width="1366"/>
-                <img src="8a91b7c001badf59902c36c138f0b93a078b78fbf1bb5fec9dba4e3b742d7914.png" title="Pablo enters 'http://tenis.com' into Input para el campo URL" width="1366"/>
-                <img src="e26b372c7a10eac2a542ef5dacf05bcdfa0f9d697f0d11326f3118e4fa4ad55a.png" title="Pablo enters 'tenis@tenis.com' into Input para el campo E-MAIL" width="1366"/>
-                <img src="de70bced0df081e7db7f918968bced18d351a06831026ff4ddabd9939ba42ba9.png" title="Pablo enters '123' into Input para el campo Password" width="1366"/>
-                <img src="5b56fcd812cf5c230a8f22124c3f151819196d2b7828ac6c98b88c734680123b.png" title="Pablo enters '123' into Input para el campo Confirm Password" width="1366"/>
-                <img src="da0ab7bdd475fcd73710f3e0e69d97889e50035ce4659c0d86a63178ada37d7f.png" title="Pablo enters '123456' into Input para el campo MINIMUN FIELD SIZE" width="1366"/>
-                <img src="7d0ad399d3b3369317092e10eaeffa3dae9b53a160c0e21b073ec4f987539795.png" title="Pablo enters '123456' into Input para el campo MAXIMUN FIELD SIZE" width="1366"/>
-                <img src="9172ee9cdf79fef4293b56fc81259f006f30dc4a671629eaa0dfc59d6762b48d.png" title="Pablo enters '123' into Input para el campo NUMBER" width="1366"/>
-                <img src="14b053f3f433e5f811de06f113b722a6de5052ff18e54670ef06ed1ec9aafd23.png" title="Pablo enters '192.168.3.1' into Input para el campo IP" width="1366"/>
-                <img src="c887ff3fba800f2dab2a62235cffc0229b773e834f7b2060d9207200dadd610e.png" title="Pablo enters '2011-12-01' into Input para el campo DATE" width="1366"/>
-                <img src="67b916d44b0585953775dd1bf03bf7c3463647cf6a0d33558784b33b70b773ec.png" title="Pablo enters '2011-12-01' into Input para el campo DATE EARLIER" width="1366"/>
-                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Pablo clicks on Bot&oacute;n de VALIDATE" width="1366"/>
-                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Verifico ingreso exitoso" width="1366"/>
-                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Validar Exitencia de Popup should be (false)" width="1366"/>
-                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Popup de validaci&amp;oacute;n sobre cada campo should be an element that is not visible: <span class='success-color'>SUCCESS</span>" width="1366"/>
+                <img src="596a8acdee4fbd19db31aee87cab9aef2c8f86d24d495ed1470609823fea4753.png" title="Then Valor del Label Titulo Ventana Form Validation should be 'Popup Validation': <span class='failing-color'>FAILURE</span>" width="1366"/>
             </div>
         </div>
 
