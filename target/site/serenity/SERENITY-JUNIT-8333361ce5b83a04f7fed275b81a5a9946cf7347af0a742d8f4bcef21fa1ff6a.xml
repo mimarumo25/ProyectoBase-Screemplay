@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Formulario Popup Validation" skipped="0" tests="1" time="31.06" timestamp="2022-12-02 08:35:01"><testcase name="Digiligenciamiento exitoso del formulario Popup Validation"><failure message="&#10;Expected: &quot;Popup Validation&quot;&#10;     but: was &lt;true&gt;" type="java.lang.AssertionError">
-Expected: "Popup Validation"
-     but: was &lt;true&gt;</failure><system-err>
-Expected: "Popup Validation"
-     but: was &lt;true&gt;&#13;
-stepdefinitions.PopupValidationDefinition.ingresoALaFuncionalidadFormsValidation(PopupValidationDefinition.java:39)&#13;
-✽.Ingreso a la funcionalidad Forms Validation(src/test/resources/features/demo.feature:13)&#13;
-</system-err></testcase></testsuite>

@@ -1,4 +1,4 @@
-group 'com.demo'
+group 'com.ProyectoBase-Screemplay.demo'
 version '1.0-SNAPSHOT'
 
 description = 'Automatización Demo '
@@ -6,12 +6,15 @@ apply plugin: 'groovy'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
-apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'
 apply plugin: 'java-library'
+apply plugin: 'jacoco'
+apply plugin: 'maven-publish'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
-
+def versionSerenity = '4.0.19'
+def versionCucumber = '7.6.0'
 repositories {
     mavenCentral()
 }
@@ -19,21 +22,45 @@ buildscript {
     repositories {
         mavenCentral()
     }
+
+}
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.9")
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.19"
     }
 }
 dependencies {
-    testImplementation 'net.serenity-bdd:serenity-core:1.1.1'
-    testImplementation 'net.serenity-bdd:serenity-junit:1.1.1'
-    testImplementation ('junit:junit:4.12')
-    testImplementation ('org.assertj:assertj-core:1.7.0')
-    testImplementation ('org.slf4j:slf4j-simple:1.7.7')
-    implementation 'net.serenity-bdd:serenity-core:1.9.9'
-    implementation 'net.serenity-bdd:serenity-junit:1.9.9'
-    implementation 'net.serenity-bdd:serenity-cucumber:1.9.5'
-    implementation 'net.serenity-bdd:serenity-screenplay:1.9.9'
-    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:1.9.9'
-    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.2.3'
+    dependencies {
+        implementation "net.serenity-bdd:serenity-cucumber:${versionSerenity}"
+        implementation group: 'io.cucumber', name: 'datatable', version: "${versionCucumber}"
+        testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: "${versionCucumber}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: "${versionSerenity}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: "${versionSerenity}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: "${versionSerenity}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-core', version: "${versionSerenity}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-report-resources', version: "${versionSerenity}"
+        implementation group: 'org.mockito', name: 'mockito-core', version: '3.12.4'
+        testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2'
+
+        implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.6.1'
+        implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.6.1'
+        compileOnly 'org.projectlombok:lombok:1.18.20'
+        annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    }
+
 }
-gradle.startParameter.continueOnFailure = true
+test {
+    useJUnit {
+        include "**/*";
+        gradle.startParameter.continueOnFailure = true
+        testLogging.showStandardStreams = true
+        systemProperties System.getProperties()
+        systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+    }
+
+}

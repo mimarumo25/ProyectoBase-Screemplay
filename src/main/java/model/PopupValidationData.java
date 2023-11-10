@@ -1,5 +1,12 @@
 package model;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.cucumber.datatable.DataTable;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class PopupValidationData {
     private String strRequired;
     private String strSelect;
@@ -15,7 +22,14 @@ public class PopupValidationData {
     private String strIP;
     private String strDate;
     private String strDateEarlier;
-
+    public static List<PopupValidationData> setData(DataTable dataTable) {
+        List<PopupValidationData> dates = new ArrayList<>();
+        List<Map<String, String>> mapInfo = dataTable.asMaps();
+        for (Map<String, String> map : mapInfo) {
+            dates.add(new ObjectMapper().convertValue(map, PopupValidationData.class));
+        }
+        return dates;
+    }
     public String getStrRequired() {
         return strRequired;
     }

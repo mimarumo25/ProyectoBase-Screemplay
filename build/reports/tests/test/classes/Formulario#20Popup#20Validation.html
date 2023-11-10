@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">29.819s</div>
+<div class="counter">1m7.02s</div>
 <p>duration</p>
 </div>
 </td>
@@ -67,10 +67,7 @@
 <a href="#tab1">Tests</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
@@ -79,14 +76,20 @@
 <a name="Digiligenciamiento exitoso del formulario Popup Validation"></a>
 <h3 class="failures">Digiligenciamiento exitoso del formulario Popup Validation</h3>
 <span class="code">
-<pre>java.lang.AssertionError: 
-Expected: &quot;Popup Validation&quot;
-     but: was &lt;true&gt;
-	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
-	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
-	at net.serenitybdd.screenplay.Actor.should(Actor.java:187)
-	at stepdefinitions.PopupValidationDefinition.ingresoALaFuncionalidadFormsValidation(PopupValidationDefinition.java:39)
-	at ✽.Ingreso a la funcionalidad Forms Validation(src/test/resources/features/demo.feature:13)
+<pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class='formErrorContent']&quot;}
+  (Session info: chrome=119.0.6045.107)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e4d8314cb44a9ffb8ec8cd03a32e8ff8, findElement {using=xpath, value=//div[@class='formErrorContent']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\inselsa\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60020}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60020/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e4d8314cb44a9ffb8ec8cd03a32e8ff8
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at stepdefinitions.PopupValidationDefinition.verificoIngresoExitoso(PopupValidationDefinition.java:59)
+	at ✽.Verifico ingreso exitoso(file:///C:/Users/inselsa/Desktop/AUTOMATIZACION/ProyectoBase-Screemplay/src/test/resources/features/demo.feature:17)
 </pre>
 </span>
 </div>
@@ -103,45 +106,16 @@ Expected: &quot;Popup Validation&quot;
 </thead>
 <tr>
 <td class="failures">Digiligenciamiento exitoso del formulario Popup Validation</td>
-<td class="failures">29.819s</td>
+<td class="failures">1m7.02s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
 </div>
 <div id="tab2" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>Inicio Test
-Fin Test
-</pre>
-</span>
-</div>
-<div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 108.0.5359.71 (resolved driver for Chrome 108)
-[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\mrubidem\.cache\selenium\chromedriver\win32\108.0.5359.71\chromedriver.exe
-dic 02, 2022 8:35:04 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
-INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 10341
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1669988105.823][WARNING]: This version of ChromeDriver has not been tested with Chrome version 108.
-dic 02, 2022 8:35:05 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-[Test worker] ERROR net.serenitybdd.core.Serenity - 
-           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
-  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
- (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
-  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
- (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
-          \_\                                                            
-
-TEST FAILED: Digiligenciamiento exitoso del formulario Popup Validation
---------------------------------------------------------------------------
-[Test worker] ERROR net.serenitybdd.core.Serenity - TEST FAILED AT STEP Then Valor del Label Titulo Ventana Form Validation should be 'Popup Validation'
-[Test worker] ERROR net.serenitybdd.core.Serenity - Expected: &quot;Popup Validation&quot; but: was &lt;true&gt;
+<pre>Nov 10, 2023 6:33:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, returning the closest version; found: 118; Please update to a Selenium version that supports CDP version 119
 </pre>
 </span>
 </div>
@@ -153,7 +127,7 @@ TEST FAILED: Digiligenciamiento exitoso del formulario Popup Validation
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at 2 dic 2022 8:35:40</p>
+<a href="http://www.gradle.org">Gradle 8.0</a> at 10 nov 2023 18:34:56</p>
 </div>
 </div>
 </body>
